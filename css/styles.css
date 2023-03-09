@@ -4,14 +4,28 @@
     box-sizing: border-box;
 }
 
+html{
+    font-family: 'Montserrat', serif;
+}
+
 .container {
     width: 100%;
+    margin: 1rem 0;
+}
+
+.container> div {
+    margin: 0 0.5rem;
+}
+
+.game-container > div{
+    margin: 0.5rem 0;
 }
 
 .tab-container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+    grid-gap: 20px;
 }
 
 .gold-container,
@@ -28,15 +42,12 @@
 .row1,
 .row2 {
     display: flex;
-    align-items: space-between;
+    /* align-items: space-between; */
     align-items: center;
     grid-gap: 20px;
 }
 
-
-
 .locations {
     display: flex;
-    justify-content: space-between;
     grid-gap: 10px;
 }

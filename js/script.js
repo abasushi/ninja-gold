@@ -4,6 +4,11 @@ var gameState = {
     events: ["cave", "house", "gold mine", "casino"]
 }
 
+var totalAssets = {
+    gained: 0,
+    lost: 0
+}
+
 $("#cave").click(cave);
 
 function cave() {
