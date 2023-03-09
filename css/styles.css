@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: 'Montserrat', serif;
 }
 
@@ -13,11 +13,11 @@ html{
     margin: 1rem 0;
 }
 
-.container> div {
+.container>div {
     margin: 0 0.5rem;
 }
 
-.game-container > div{
+.game-container>div {
     margin: 0.5rem 0;
 }
 
@@ -48,6 +48,12 @@ html{
 }
 
 .locations {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.total-gains,
+.total-lost {
     display: flex;
     grid-gap: 10px;
 }
