@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gold-container,
+.attempts-container,
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    /* background-color: #000;
+    color: #fff; */
+}
+
+.row1,
+.row2 {
+    display: flex;
+    align-items: space-between;
+    align-items: center;
+    grid-gap: 20px;
+}
+
+
+
+.locations {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 10px;
+}
