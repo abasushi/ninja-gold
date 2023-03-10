@@ -34,11 +34,12 @@ function cave() {
     $(document).ready(function () {
         var logHistory = { "dt": new Date(), "nextline": "<br>", "gold": "You have earned 5 gold", "place": "<br>Location: Cave<br><br>" };
         $.each(logHistory, function (key, value) {
-            console.log("%cYou have earned 5 gold!", 'color: green');
             $("#log-gains").append(value + ' ');
             $("#log-gains").css('color', 'green');
         });
     });
+
+    console.log("%cYou have earned 5 gold!", 'color: green');
 
     gameOver();
 }
@@ -71,11 +72,12 @@ function house() {
         $(document).ready(function () {
             var logHistory = { "dt": new Date(), "nextline": "<br>", "gold": "You have earned 10 gold", "place": "<br>Location: House<br><br>" };
             $.each(logHistory, function (key, value) {
-                console.log("%cYou have earned 10 gold!", 'color: green');
                 $("#log-gains").append(value + ' ');
                 $("#log-gains").css('color', 'green');
             });
         });
+
+        console.log("%cYou have earned 10 gold!", 'color: green');
     } else {
         //Adds 0 gold to overall gold
         gameState.gold += 0;
@@ -88,11 +90,12 @@ function house() {
         $(document).ready(function () {
             var logHistory = { "dt": new Date(), "nextline": "<br>", "gold": "You have earned 0 gold", "place": "<br>Location: House<br><br>" };
             $.each(logHistory, function (key, value) {
-                console.log("%cYou have earned 0 gold!");
                 $("#log-zero").append(value + ' ');
                 $("#log-zero").css('color', 'black');
             });
         });
+
+        console.log("You have earned 0 gold!");
     }
 
     gameOver();
@@ -131,21 +134,23 @@ function goldMine() {
         $(document).ready(function () {
             var logHistory = { "dt": new Date(), "prompt1": "<br>You have earned ", "Gold": randomMineGold, "prompt2": " gold!", "place": "<br>Location: Gold Mine<br><br>" };
             $.each(logHistory, function (key, value) {
-                console.log("%cYou earned %d coins!", 'color: green', randomMineGold);
                 $("#log-gains").append(value);
                 $("#log-gains").css('color', 'green');
             });
         });
+
+        console.log("%cYou have earned %d coins!", 'color: green', randomMineGold);
     } else {
         gameState.gold += 0;
 
         $(document).ready(function () {
             var logHistory = { "dt": new Date(), "nextline": "<br>", "gold": "You have earned 0 gold", "place": "<br>Location: Gold Mine<br><br>" };
             $.each(logHistory, function (key, value) {
-                console.log("%cYou have earned 0 gold!");
                 $("#log-zero").append(value + ' ');
             });
         });
+
+        console.log("You have earned 0 gold!");
     }
     gameOver();
 }
@@ -178,11 +183,12 @@ function casino() {
         $(document).ready(function () {
             var logHistory = { "dt": new Date(), "prompt1": "<br>You have earned ", "Gold": randomCasinoGold, "prompt2": " gold!", "place": "<br>Location: Casino<br><br>" };
             $.each(logHistory, function (key, value) {
-                console.log("%cYou have earned %d coins!", 'color: green', randomCasinoGold);
                 $("#log-gains").append(value);
                 $("#log-gains").css('color', 'green');
             });
         });
+
+        console.log("%cYou have earned %d coins!", 'color: green', randomCasinoGold);
     } else {
         //Generates between 40 to 50 gold
         randomCasinoGold = Math.floor(Math.random() * (50 - 40) + 40);
@@ -199,11 +205,12 @@ function casino() {
         $(document).ready(function () {
             var logHistory = { "dt": new Date(), "prompt1": "<br>You have earned ", "Gold": randomCasinoGold, "prompt2": " gold!", "place": "<br>Location: Casino<br><br>" };
             $.each(logHistory, function (key, value) {
-                console.log("%cYou have lost %d coins!", 'color: red', randomCasinoGold);
                 $("#log-losses").append(value);
                 $("#log-losses").css('color', 'red');
             });
         });
+
+        console.log("%cYou have lost %d coins!", 'color: red', randomCasinoGold);
     }
     gameOver();
 }
@@ -230,11 +237,13 @@ function reset() {
     location.reload();
 }
 
+//Ninja animation to location
 $("#cave").click(function () {
     $("#ninja").animate({
         marginLeft: '-320px',
         marginTop: '-100px'
     }, 800, function () {
+        //resets the margins once the duration ends
         $(this).css({ marginLeft: 0, marginTop: 0 });
     });
 });
@@ -244,6 +253,7 @@ $("#house").click(function () {
         marginLeft: '-320px',
         marginTop: '100px'
     }, 800, function () {
+        //resets the margins once the duration ends
         $(this).css({ marginLeft: 0, marginTop: 0 });
     });
 });
@@ -253,6 +263,7 @@ $("#casino").click(function () {
         marginLeft: '420px',
         marginTop: '100px'
     }, 800, function () {
+        //resets the margins once the duration ends
         $(this).css({ marginLeft: 0, marginTop: 0 });
     });
 });
@@ -262,6 +273,7 @@ $("#goldMine").click(function () {
         marginLeft: '420px',
         marginTop: '-100px'
     }, 800, function () {
+        //resets the margins once the duration ends
         $(this).css({ marginLeft: 0, marginTop: 0 });
     });
 });
