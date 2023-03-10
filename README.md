@@ -5,4 +5,5 @@ Control your ninja to go to four different places to get gold. Once you reach 25
 # Versions
 v1.0 - Added skeleton/base UI. Added functions for the Cave, House, Gold Mine, and Casino locations. <br />
 v1.1 - Cleaned the skeleton/base UI. <br />
-v1.2 - Fixed Gold Mine and Casino display bugs and added comments.
+v1.2 - Fixed Gold Mine and Casino display bugs and added comments. <br />
+v1.3 - Fixed log history and finalized the UI design.
